@@ -32,6 +32,7 @@ while True:
                         break
                     else:
                         print("Ingrese un número entero positivo")
+            print(f"")
 
         case "2":
             print(f"\nMostrar todas las ventas realizadas")
@@ -68,7 +69,7 @@ while True:
                     low_sale.append(l)
             print(f"Venta alta: {high_sale}")
             print(f"Venta media: {mid_sale}")
-            print(f"Venta baja: {low_sale}")
+            print(f"Venta baja: {low_sale}\n")
 
         case "7":
             print(f"\nSalio del programa...")
