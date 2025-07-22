@@ -23,6 +23,8 @@ while True:
 
         case "2":
             print(f"Mostrar todas las ventas realizadas")
+            for j in range(len(list_sale_day)):
+                print(f"Venta día {j+1} = Q{list_sale_day[j]}")
 
         case "3":
             print(f"Venta más baja y alta")
