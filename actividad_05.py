@@ -34,12 +34,14 @@ while True:
             print(f"\nMostrar todas las ventas realizadas")
             for j in range(len(list_sale_day)):
                 print(f"Venta día {j+1} = Q{list_sale_day[j]}")
+            print(f"")
 
         case "3":
             print(f"\nVenta más baja y alta")
 
         case "4":
             print(f"\nPromedio de ventas")
+            print(f"El promedio de las ventas son de Q{sum(list_sale_day)/len(list_sale_day)}\n")
 
         case "5":
             print(f"\nDias de buena venta")
