@@ -1,4 +1,7 @@
 list_sale_day = []
+high_sale = []
+low_sale = []
+mid_sale = []
 
 while True:
     print(f"MENÚ DE ANÁLISIS DE VENTAS")
@@ -7,9 +10,8 @@ while True:
     print(f"3. Calcular venta más alta y baja")
     print(f"4. Promedio de ventas")
     print(f"5. Dias de buena venta")
-    print(f"6. Buscar ventas")
-    print(f"7. Clasificacion de ventas")
-    print(f"8. Salir")
+    print(f"6. Clasificacion de ventas")
+    print(f"7. Salir")
     option_user = input(f"Ingrese una opción: ")
 
     match option_user:
@@ -38,6 +40,8 @@ while True:
 
         case "3":
             print(f"\nVenta más baja y alta")
+            print(f"La venta más alta fue de Q{max(list_sale_day)}")
+            print(f"La venta más alta fue de Q{min(list_sale_day)}\n")
 
         case "4":
             print(f"\nPromedio de ventas")
@@ -47,12 +51,9 @@ while True:
             print(f"\nDias de buena venta")
 
         case "6":
-            print(f"\nBuscar ventas")
-
-        case "7":
             print(f"\nClasificacion de ventas")
 
-        case "8":
+        case "7":
             print(f"\nSalio del programa...")
             break
 
