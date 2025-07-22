@@ -22,6 +22,7 @@ while True:
             for i in range(1, days_sale+1):
                 while True:
                     price_day = input(f"Ingrese la venta del día {i} en numeros enteros: Q")
+                    #ESTA PARTE SI LA INVESTIGUE PARA VER LO DEL DIGITO
                     if price_day.isdigit():
                         price_day_right = int(price_day)
                         if price_day_right >= 0:
@@ -58,6 +59,16 @@ while True:
 
         case "6":
             print(f"\nClasificacion de ventas")
+            for l in list_sale_day:
+                if l > 1000:
+                    high_sale.append(l)
+                elif l > 500 and l <= 1000:
+                    mid_sale.append(l)
+                elif l > 0 and l <= 500:
+                    low_sale.append(l)
+            print(f"Venta alta: {high_sale}")
+            print(f"Venta media: {mid_sale}")
+            print(f"Venta baja: {low_sale}")
 
         case "7":
             print(f"\nSalio del programa...")
