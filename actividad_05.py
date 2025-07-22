@@ -49,6 +49,12 @@ while True:
 
         case "5":
             print(f"\nDias de buena venta")
+            count_value = 0
+            print(f"\nDias de buena venta")
+            for k in list_sale_day:
+                if k > 1000:
+                    count_value += 1
+            print(f"El total de ventas mayores a Q1000 son de ({count_value}) veces\n")
 
         case "6":
             print(f"\nClasificacion de ventas")
