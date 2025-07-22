@@ -14,36 +14,45 @@ while True:
 
     match option_user:
         case "1":
-            print(f"Ingresar lista de ventas")
+            print(f"\nIngresar lista de ventas")
             days_sale = int(input(f"Ingrese cuantos dias de venta registrara: "))
             i = 0
             for i in range(1, days_sale+1):
-                price_day = int(input(f"Ingrese la venta del día {i}: Q"))
-                list_sale_day.append(price_day)
+                while True:
+                    price_day = input(f"Ingrese la venta del día {i} en numeros enteros: Q")
+                    if price_day.isdigit():
+                        price_day_right = int(price_day)
+                        if price_day_right >= 0:
+                            list_sale_day.append(price_day_right)
+                        else:
+                            print(f"No ingreso un número entero positivo")
+                        break
+                    else:
+                        print("Ingrese un número entero positivo")
 
         case "2":
-            print(f"Mostrar todas las ventas realizadas")
+            print(f"\nMostrar todas las ventas realizadas")
             for j in range(len(list_sale_day)):
                 print(f"Venta día {j+1} = Q{list_sale_day[j]}")
 
         case "3":
-            print(f"Venta más baja y alta")
+            print(f"\nVenta más baja y alta")
 
         case "4":
-            print(f"Promedio de ventas")
+            print(f"\nPromedio de ventas")
 
         case "5":
-            print(f"Dias de buena venta")
+            print(f"\nDias de buena venta")
 
         case "6":
-            print(f"Buscar ventas")
+            print(f"\nBuscar ventas")
 
         case "7":
-            print(f"Clasificacion de ventas")
+            print(f"\nClasificacion de ventas")
 
         case "8":
-            print(f"Salio del programa...")
+            print(f"\nSalio del programa...")
             break
 
         case _:
-            print(f"Ingreso mal un valor")
+            print(f"\nIngreso mal un valor")
