@@ -1,3 +1,5 @@
+list_sale_day = []
+
 while True:
     print(f"MENÚ DE ANÁLISIS DE VENTAS")
     print(f"1. Ingresar lista de ventas")
@@ -13,6 +15,11 @@ while True:
     match option_user:
         case "1":
             print(f"Ingresar lista de ventas")
+            days_sale = int(input(f"Ingrese cuantos dias de venta registrara: "))
+            i = 0
+            for i in range(1, days_sale+1):
+                price_day = int(input(f"Ingrese la venta del día {i}: Q"))
+                list_sale_day.append(price_day)
 
         case "2":
             print(f"Mostrar todas las ventas realizadas")
